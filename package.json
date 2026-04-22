@@ -1,0 +1,15 @@
+{
+  "name": "karma-bot",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "debug": "^4.4.3",
+    "discord.js-selfbot-v13": "^3.7.1",
+    "dotenv": "^16.4.5",
+    "opencode-ai": "1.14.20"
+  }
+}
