@@ -9,7 +9,6 @@
   "dependencies": {
     "debug": "^4.4.3",
     "discord.js-selfbot-v13": "^3.7.1",
-    "dotenv": "^16.4.5",
-    "opencode-ai": "1.14.20"
+    "dotenv": "^16.4.5"
   }
 }
