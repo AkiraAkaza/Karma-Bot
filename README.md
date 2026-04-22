@@ -1,7 +1,6 @@
 <p align="center">
   <img src="https://cdn.discordapp.com/attachments/1307371181829259294/1496518453731922021/1776867958053.png?ex=69ea2ceb&is=69e8db6b&hm=8c518408330da149b597b55c5c2d6b8f462982b2165e4eb7227726c11189a1f7" alt="Karma Bot Banner" width="100%">
   <img src="https://img.shields.io/badge/Node.js-18+-green?style=flat-square&logo=node.js" alt="Node.js">
-  <img src="https://img.shields.io/badge/discord.js-selfbot-v13-blue?style=flat-square&logo=discord)](https://github.com/aaa1337c/discord.js-selfbot-v13" alt="Discord.js-selfbot-v13">
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="License">
 </p>
 
@@ -53,7 +52,7 @@ karma-bot/
 
 ```bash
 # Clone repository
-git clone https://github.com/your-repo/karma-bot.git
+git clone https://github.com/AkiraAkaza/karma-bot.git
 cd karma-bot
 
 # Install dependencies
@@ -73,6 +72,33 @@ TOKEN=your_discord_token
 
 # Channel ID để bot reply
 CHANNEL_ID=your_target_channel_id
+```
+
+## 🔑 Hướng dẫn lấy Discord SelfBot Token
+
+Run code (Discord Console - [Ctrl + Shift + I])
+
+```javascript
+window.webpackChunkdiscord_app.push([
+  [Symbol()],
+  {},
+  req => {
+    if (!req.c) return;
+    for (let m of Object.values(req.c)) {
+      try {
+        if (!m.exports || m.exports === window) continue;
+        if (m.exports?.getToken) return copy(m.exports.getToken());
+        for (let ex in m.exports) {
+          if (m.exports?.[ex]?.getToken && m.exports[ex][Symbol.toStringTag] !== 'IntlMessagesProxy') return copy(m.exports[ex].getToken());
+        }
+      } catch {}
+    }
+  },
+]);
+
+window.webpackChunkdiscord_app.pop();
+console.log('%cWorked!', 'font-size: 50px');
+console.log(`%cYou now have your token in the clipboard!`, 'font-size: 16px');
 ```
 
 > ⚠️ **Lưu ý**: Không chia sẻ token công khai hoặc bất kỳ ai khác.
